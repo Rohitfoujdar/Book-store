@@ -9,7 +9,7 @@ export default function Login() {
     <div>
         <dialog id="my_modal_3" className="modal">
           <div className="modal-box dark:bg-slate-900 dark:text-white">
-            <form method="dialog" onClick={handleSubmit(onSubmit)}>
+            <form  method="dialog" >
               <button
                 className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => document.getElementById("my_modal_3").close()}
               >
@@ -38,10 +38,10 @@ export default function Login() {
                 {...register("password", { required: true })}
               />
               <br/>
-                    {errors.password&& <span className="text-sm text-red-500">This field is required</span>}
+                {errors.password&& <span className="text-sm text-red-500">This field is required</span>}
             </div>
             <div className="flex items-center justify-around mt-4">
-              <button className="bg-pink-500 rounded-md text-white px-3 py-1 hover:bg-pink-700 duration-200" >
+              <button className="bg-pink-500 rounded-md text-white px-3 py-1 hover:bg-pink-700 duration-200" onClick={handleSubmit(onSubmit)} >
                 Login
               </button>
              <p>
